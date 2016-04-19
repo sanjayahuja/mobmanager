@@ -16,7 +16,7 @@ module Platform
           caps = YAML.load_file(Dir.pwd + '/features/support/settings/android.yml') if settings.nil?
           setup_for_android_sauce caps
         else
-          spawn "emulator -avd #{ANDROID_EMULATOR} -no-audio"
+          spawn "emulator -avd #{ANDROID_EMULATOR} -no-skin -no-audio -no-window"
         end
       end
 
